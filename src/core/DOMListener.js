@@ -13,7 +13,7 @@ export class DOMListener {
         this.listeners.forEach(listener => {
             const method = getMethodName(listener)
             if (!this[method]) {
-                const name = this.name || ''
+                const name = this.name
                 throw new Error(`Method ${method} isn't ` +
                     `exist in ${name} Component`)
             }
